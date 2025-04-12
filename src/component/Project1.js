@@ -10,28 +10,28 @@ function Project1(Props) {
         e.preventDefault();
         const num1 = Number(N1);
         const num2 = Number(N2);
-        let res;
+        let x;
 
         switch (operation) {
             case "add":
-                res = num1 + num2;
+                x = num1 + num2;
                 break;
             case "subtract":
-                res = num1 - num2;
+                x = num1 - num2;
                 break;
             case "multiply":
-                res = num1 * num2;
+                x = num1 * num2;
                 break;
             case "divide":
-                res = num2 !== 0 ? num1 / num2 : "Error"; 
+                x = num2 !== 0 ? num1 / num2 : "Error"; 
                 break;
             case "remainder":
-                res = num2 !== 0 ? num1 % num2 : "Error";
+                x = num2 !== 0 ? num1 % num2 : "Error";
                 break;
             default:
-                res = "Invalid";
+                x = "Invalid";
         }
-        setResult(res);
+        setResult(x);
     }
     return (
         <div className='col'>

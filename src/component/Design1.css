@@ -1,53 +1,70 @@
-.col{
+ 
+.container {
     background-color: yellow;
-    margin-top: 20px;
-    margin-left: 300px;
-    margin-right: 300px;
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 20px;
     border-radius: 30px;
-    
+    text-align: center;
+    box-sizing: border-box;
 }
-.col:hover{
+
+.container:hover {
     background-color: aqua;
     box-shadow: 0px 0px 25px red;
 }
-.calculate{
-    text-align: center;
-    margin-left: -160px;
-    margin-top: -50px;
-}
-.submit{
-    margin-left: 300px;
-    height: 30px; 
-}
-.submit:hover{
-    border-color: red;
-}
-.boxsize{
-    width: 400px;
-    height: 30px;
-    margin: 10px;
-    text-align: center;
-    font-size: 20px;
 
+
+.title {
+    margin-bottom: 20px;
+    font-size: 24px;
 }
-.boxsize:hover{
+
+
+.boxsize {
+    width: 90%;
+    height: 35px;
+    margin: 10px 0;
+    font-size: 18px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.boxsize:hover {
     border-color: red;
 }
-.col1{
-    margin-left: -250px;
-    
-}
-.col2{
-    margin-top: -132px;
-    margin-left: -100px;
-}
-.col3{
+
+
+.submit {
     margin-top: 15px;
-    margin-left: -100px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
-.col4{
-    margin-top: 2px;
-    margin-left: -185px;
-    
-    
+
+.submit:hover {
+    border: 2px solid red;
+    background-color: #45a049;
+}
+
+
+.operations {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.operations label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 16px;
 }

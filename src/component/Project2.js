@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Design2 from './Design2.css';
+import './Design2.css';
 function Project2(Props) {
     const [N1, setN1] = useState("");
     const [N2, setN2] = useState("");

@@ -1,39 +1,38 @@
-.all{
+.all {
     background-color: red;
     border-radius: 20px;
-    margin-left: 250px;
-    margin-right: 250px;
-    height: 400px;
-    margin-top: 20px;
+    margin: 20px auto;
+    height: auto;
+    padding: 20px;
+    max-width: 600px;
+    box-sizing: border-box;
 }
 
-.all:hover{
+.all:hover {
     box-shadow: 0px 0px 100px blue;
 }
 
-.col{
-    width: 400px;
-    height: 30px;
-    margin-top: 30px;
+.col {
+    width: 100%;
+    height: 40px;
+    margin-top: 20px;
     text-align: center;
     font-size: 20px;
     background-color: lightgreen;
+    box-sizing: border-box;
 }
 
-.col1{
-margin-top: 10px;
-margin-left: -200px;
-
-}
-
-.col2{
+.col1,
+.col2 {
+    display: inline-block;
     margin: 10px;
-    margin-top: -63px;
+    vertical-align: middle;
 }
 
-.submit{
-    margin-top: 50px;
-    width: 250px;
-    height: 25px;
-    background-color:limegreen;
+.submit {
+    margin-top: 30px;
+    width: 100%;
+    height: 40px;
+    background-color: limegreen;
+    font-size: 18px;
 }

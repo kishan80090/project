@@ -1,7 +1,7 @@
 import React from 'react';
 // import Product from './component/Product';
 import Project2 from './component/Project2';
-import Project1 from './component/Project1';
+
 import './App.css';
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
         <Product />
       </div> */}
       <Project2></Project2>
-      <Project1></Project1>
+      
       
     </div>
   );

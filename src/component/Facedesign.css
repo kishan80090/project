@@ -1,0 +1,92 @@
+.main {
+    background-color: white(233, 231, 228);
+    width: 500px;
+    height: 800px;
+    margin: 20px auto;
+    box-shadow: 0px 0px 25px blue;
+    border-radius: 10px;
+    
+}
+
+.color {
+    color: rgb(31, 31, 150);
+    background-color: white;
+    border-radius: 10px;
+    
+}
+.color1{
+    color: rgb(126, 129, 129);
+}
+.input{
+    width: 200px;
+    height:35px;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 18px;
+}
+.input:hover{
+    border-color: red;
+}
+.dob{
+    margin-right: 335px;
+}
+.option{
+    width: 125px;
+    height: 35px;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 18px;
+}
+.radio{
+    width: 105px;
+    height: 35px;
+    margin-left: 20px;
+    margin-right: 20px;
+     
+}
+.email{
+    margin-top: 30px;
+    width: 400px;
+    height: 35px;
+    font-size: 18px;
+}
+.email:hover{
+    border-color: red;
+}
+.font{
+    font-size: 12px;
+}
+.font1{
+    font-size: 12px;
+    margin-right: 290px;
+}
+.font2{
+    font-size: 11px;
+    margin-right: 50px;
+}
+.font3{
+    font-size: 12px;
+    margin-right: 40px;
+}
+.botton{
+    width: 250px;
+    height: 40px;
+    font-size: 18px;
+    margin-top: 15px;
+    background-color:green;
+    border-radius: 10px;
+    border: none;
+    color: white;
+}
+.link{
+    margin-top: 15px;
+    
+}
+
+@media screen and (max-width: 600px) {
+    .main {
+        width: 90%;
+        margin: 20px auto;
+        padding: 15px;
+    }
+}

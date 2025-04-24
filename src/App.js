@@ -1,33 +1,26 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import './App.css';
-import Facebook from './component/Facebook';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
-import Login from './component/Login';
-
-// import Forget from './component/Forget';
-
+import Home from './component/Home';
+import SearchPage from './component/Search';
+import Product from './component/Product';
 
 
 function App() {
   return (
-    <div className="App">
-      <Router>
-        <Routes>
+    <Router>
 
-        
-          <Route path="/" element={<Facebook/>}/>
-          
-          
-          <Route path='/login' element={<Login/>}/>/
+      
 
-          {/* <Route path='/forget' element={<Forget/>}/> */}
+      <Routes>
+      
+      <Route path="/" element={<Home />} />
+      <Route path="/search" element={<SearchPage/>}/>
+      <Route path="/product" element={<Product/>}/>
+      
+      </Routes>
+    </Router>
 
-          
-        </Routes>
-      </Router>
-
-      </div>
-    
   );
 }
+
 export default App;

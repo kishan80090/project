@@ -1,31 +1,50 @@
-import React, { useState } from "react";
+import './Product.css';
+ import React, { useState } from 'react';
+ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+ function Product(props) {
+     
+     const [count, setCount] = useState(0); 
+     
+     const add = (() =>{
+     setCount(count*1 + 1)
+     });
+ 
+     const negative = (() =>{         
+        if (count > 0) 
+        {
 
-function Product(props) {
-  const [count, setCount] = useState(0);
+        setCount(count*1 - 1);
 
-  const add = () => {
-    if (count < 10) {
-      setCount(count + 1);
-    }
-  };
+        }
+     });
+     let productlink=`product/?productname=${props.productname}`;
+     
+     return(
+     
+     <div className='col1'>
 
-  const minus = () => {
-    if (count > 0) {
-      setCount(count - 1);
-    }
-  };
+           <Link to="/search"><img className='col3' src={props.pic}></img></Link>   
 
-  return (
-    <div className="product-container">
-      <h2 className="color">Brand Product</h2>
-      <img className="product-image" src={props.pic} alt={props.sname || "Product"} />
-      <h3>{props.sname}: {count}</h3>
-      <div className="button-group">
-        <button className="btn minus" onClick={minus}>-</button>
-        <button className="btn plus" onClick={add}>+</button>
-      </div>
-    </div>
-  );
-}
+            <center><h2 className='name'>{props.sname}</h2></center>
 
-export default Product;
+            <div className='col2'>
+ 
+             <Link className='border' to={productlink}>{props.sname}</Link>
+
+                <div className="text">
+ 
+                 <button onClick={negative}>−</button>
+
+                 <span>{count}</span>
+
+                 <button onClick={add}>+</button>
+ 
+                </div>
+             </div>
+ 
+             <p>{props.children}</p>
+ 
+         </div>
+     )
+ };
+ export default Product;

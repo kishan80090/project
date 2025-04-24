@@ -1,0 +1,16 @@
+[
+    {
+        "pepsi": {
+            "description": "Cold Drink",
+            "price": 200,
+            "image": "pic/pepsi.jpg"
+        }
+    },
+    {
+        "coke": {
+            "description": "Cold Drink",
+            "price": 150,
+            "image": "pic/coke.jpg"
+        }
+    }
+]

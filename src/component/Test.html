@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const jsontext = `[
+    {
+    "name":"pepsi",
+            "description": "Cold Drink",
+            "price": 200,
+            "image": "pic/pepsi.jpg"
+        
+    },
+    {
+         "name":"coke",
+            "description": "Cold Drink",
+            "price": 150,
+            "image": "pic/coke.jpg"
+    }
+]`;
+        function getProduct() {
+            const jsonobject = JSON.parse(jsontext);
+            // alert(jsonobject[0]);
+            console.log(jsonobject[0].name);
+        }
+        function getProductByName(productname) {
+            const jsonobject = JSON.parse(jsontext);
+            // alert(jsonobject[0]);
+            // console.log(jsonobject[0].name);
+            const n = jsonobject.length;
+            console.log(n);
+            for (let i = 0; i <= n - 1; i++) {
+                const currentobject = jsonobject[i];
+                const currentobjectname = currentobject.name.toLowerCase().trim();
+                productname.toLowerCase().trim();
+                console.log(currentobjectname);
+                if(productname==currentobjectname)
+            {
+                console.log(i);
+                let output=`Name: ${currentobject.name}<br>Price:${currentobject.price}`;
+                document.getElementById("d").innerHTML=output;
+                return;
+            }
+            }
+        }
+    </script>
+</head>
+<body>
+    <center><input type="text"><br /><br />
+    <button onclick="getProduct()">submit</button>
+    </center>
+    <button onclick="getProductByName('coke')">submit</button>
+    <div id="d">
+    </div>
+</body>
+</html>

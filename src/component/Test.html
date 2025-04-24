@@ -8,19 +8,36 @@
     <script>
         const jsontext = `[
     {
-    "name":"pepsi",
-            "description": "Cold Drink",
-            "price": 200,
-            "image": "pic/pepsi.jpg"
-        
+    "name": "pepsi",
+    "description": "Cold Drink",
+    "price": 20,
+    "image": "pic/pepsi.jpg"
     },
     {
-         "name":"coke",
-            "description": "Cold Drink",
-            "price": 150,
-            "image": "pic/coke.jpg"
+    "name": "coke",
+    "description": "Cold Drink",
+    "price": 150,
+    "image": "pic/coke.jpg"
+    },
+    {
+    "name": "charged",
+    "description": "Cold Drink",
+    "price": 50,
+    "image": "pic/charged.jpg"
+    },
+    {
+    "name": "fruit",
+    "description": "Cold Drink",
+    "price": 20,
+    "image": "pic/fruit.jpg"
+    },
+    {
+    "name": "apple",
+    "description": "Cold Drink",
+    "price": 15,
+    "image": "pic/fruit.jpg"
     }
-]`;
+    ]`;
         function getProduct() {
             const jsonobject = JSON.parse(jsontext);
             // alert(jsonobject[0]);
@@ -32,7 +49,8 @@
             // console.log(jsonobject[0].name);
             const n = jsonobject.length;
             console.log(n);
-            for (let i = 0; i <= n - 1; i++) {
+            for (let i = 0; i <= n - 1; i++)
+             {
                 const currentobject = jsonobject[i];
                 const currentobjectname = currentobject.name.toLowerCase().trim();
                 productname.toLowerCase().trim();
@@ -49,11 +67,11 @@
     </script>
 </head>
 <body>
-    <center><input type="text"><br /><br />
+    <center><input type="text" ><br /><br />
     <button onclick="getProduct()">submit</button>
-    </center>
-    <button onclick="getProductByName('coke')">submit</button>
-    <div id="d">
-    </div>
+     <button onclick="getProductByName('name')">submit</button>
+     <div id="d">
+    </div> 
+</center>
 </body>
 </html>

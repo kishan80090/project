@@ -2,14 +2,14 @@ import './Product.css';
  import React, { useState } from 'react';
  import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
  function Product(props) {
-     
+
      const [count, setCount] = useState(0); 
      
-     const add = (() =>{
+     const add = (() => {
      setCount(count*1 + 1)
      });
  
-     const negative = (() =>{         
+     const negative = (() => {         
         if (count > 0) 
         {
 

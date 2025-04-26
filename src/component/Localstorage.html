@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalStorage Image Example</title>
+    <script>
+        function getData() {
+            console.log("getData");
+            let vaLue = localStorage.getItem("src");
+            
+            document.getElementById("img").src=vaLue;
+        }
+
+        function setData() {
+            console.log("setData");
+            localStorage.setItem("src", "pic/Phone.jpg");
+            alert("Image path saved to localStorage.");
+        }
+
+        function removeData() {
+            console.log("removeData");
+           let show= localStorage.removeItem("src");
+            document.getElementById("img").src = show;
+        }
+
+        function clearData() {
+            console.log("clearData");
+            localStorage.clear();
+            document.getElementById("dd").src = "All data cleared from localStorage.";
+        }
+    </script>
+</head>
+
+<body>
+    <center>
+        <h1>LocalStorage Image Example</h1>
+
+<div id="dd" >
+        <button onclick="getData()">Get</button>
+        <button onclick="setData()">Set</button>
+        <button onclick="removeData()">Remove</button>
+        <button onclick="clearData()">Clear</button>
+    </center>
+
+    <img id="img" src="pic/Phone.jpg"/>
+    
+</div>
+</body>
+
+</html>

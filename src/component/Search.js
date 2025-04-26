@@ -4,7 +4,7 @@ function SearchPage() {
   
   const queryParams = new URLSearchParams(location.search);
   const imgurl=queryParams.get("Productname");
-  const price=queryParams.get("prince");
+  const price=queryParams.get("price");
 
   return (
     <div>

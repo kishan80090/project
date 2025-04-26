@@ -1,34 +1,56 @@
 import { useState } from "react";
-import axios from "axios";
+import axios from 'axios';
 
-function Apicall(){
-    const[error,setError]=useState('');
-    const[image,setImage]=useState('');
+function Apicall() {
+  const [products, setProducts] = useState([]);
 
-    const Search =()=>{
+  const show = () => {
+    axios.get("https://kishan80090.github.io/jsondata/products.json")
+      .then(response => {
+        localStorage.setItem("products", JSON.stringify(response.data));
+      })
+      .catch(error => {
+        alert("Error fetching data");
+      });
+  };
 
-        const baseURL=`https://kishan80090.github.io/project/Name.json`;
-
-        axios.get(baseURL).then((response)=>{
-            setImage(response.data);
-        })
-
-        .catch(error=> {
-            console.log("Error",error);
-            setError("API call is Error :");
-        });
+  const showData = () => {
+    const data = localStorage.getItem("products");
+    if (data) {
+      setProducts(JSON.parse(data));
     }
-    return(
-        <div>
-        <button onClick={Search}>SUBMIT</button>
+  };
 
-        
-   {image &&
-   <pre>
-    {JSON.stringify(image,null,2)};
-   </pre>
+  const clearData = () => {
+    localStorage.removeItem("products");
+  };
+
+  return (
+    <div>
+        <table border="1" >
+            <tbody>
+      <tr>  
+      <td><button onClick={show}>Store</button></td>
+      <td><button onClick={showData}>Show Data</button></td>
+      <td><button onClick={clearData}>Clear Data</button></td>
+      </tr>
+
+      </tbody>
+      </table>
+     
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px',color:"red",margin:"50px",marginLeft:"60px" }}>
+  {products.map((product) => ( 
+    <li style={{ listStyle: 'none', border: '2px solid black', padding: '10px', width: '200px' }}>
+      {product.name}
+      <p>Price: {product.price}</p>
+      <img src={product.image} width="100"/>
+    </li>
+  ))}
+</div>
+
+    </div>
+  );
 }
-        </div>
-    )
-};
+
 export default Apicall;
+

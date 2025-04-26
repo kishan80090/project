@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>People Table</title>
+</head>
+<body>
+
+  <h2>People Table</h2>
+  <table border="1" id="peopleTable">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+
+  <script>
+    let people = [
+      { name: "A", age: 30 },
+      { name: "B", age: 25 },
+      { name: "C", age: 35 }
+    ];
+
+    function generateRowHtml(person) {
+      return `
+        <tr>
+          <td>${person.name}</td>
+          <td>${person.age}</td>
+        </tr>
+      `;
+    }
+
+    let tbody = document.querySelector("#peopleTable tbody");
+
+    people.forEach(person => {
+      tbody.innerHTML += generateRowHtml(person);
+    });
+  </script>
+
+</body>
+</html>

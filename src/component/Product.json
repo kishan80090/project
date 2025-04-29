@@ -1,27 +1,52 @@
 [
     {
-        "name":"rose",
+        "name":"Rose",
         "price":"20",
-        "image":"pic/red.jpg"
+        "image":"https://kishan80090.github.io/jsondata/pictures/red.jpg"
     },
     {
-        "name":"boll",
+        "name":"Book",
         "price":"150",
-        "image":"pic/Boll.jpg"
+        "image":"https://kishan80090.github.io/jsondata/pictures/Boll.jpg"
     },
     {
-        "name":"fan",
+        "name":"Fan",
         "price":"1500",
-        "image":"pic/Fan.jpg"
+        "image":"https://kishan80090.github.io/jsondata/pictures/Fan.jpg"
     },
     {
-        "name":"book",
+        "name":"Book",
         "price":"1500",
-        "image":"pic/Notbook.jpg"
+        "image":"https://kishan80090.github.io/jsondata/pictures/Notbook.jpg"
     },
     {
-        "name":"hair oil",
+        "name":"Hair Oil",
         "price":"150",
-        "image":"pic/Oil.jpg"
+        "image":"https://kishan80090.github.io/jsondata/pictures/Oil.jpg"
+    },
+    {
+        "name":"Pen",
+        "price":"90",
+        "image":"https://kishan80090.github.io/jsondata/pictures/Pen.jpg"
+    },
+    {
+        "name":"Face Wash",
+        "price":"165",
+        "image":"https://kishan80090.github.io/jsondata/pictures/Facewash.jpg"
+    },
+    {
+        "name":"Phone",
+        "price":"1500",
+        "image":"https://kishan80090.github.io/jsondata/pictures/Phone.jpg"
+    },
+    {
+        "name":"Pencil",
+        "price":"40",
+        "image":"https://kishan80090.github.io/jsondata/pictures/Pensil.jpg"
+    },
+    {
+        "name":"Rose",
+        "price":"25",
+        "image":"https://kishan80090.github.io/jsondata/pictures/blue.jpg"
     }
 ]

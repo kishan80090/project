@@ -7,35 +7,29 @@ function Home() {
     return (
     
         <div className="container">
-            
-            <Link to="/search?price=50">rose
-        
-              <Product productname="Rose" sname="Rose" pic="/pic/red.jpg" />
+    
+              <Product productname="Rose" sname="Rose" pic="/pic/red.jpg "price={20} />
 
-              </Link>
-            
-                <Product productname="Boll" sname="Boll" pic="/pic/Boll.jpg" />
+                <Product productname="Boll" sname="Boll" pic="/pic/Boll.jpg"price={50} />
                   
-                <Product productname="Fan" sname="Fan" pic="/pic/Fan.jpg" />
+                <Product productname="Fan" sname="Fan" pic="/pic/Fan.jpg"price={1500} />
+                                
+                <Product productname="Note book" sname="Note book" pic="/pic/Notbook.jpg"price={80} />
                   
-                <Product productname="Note book" sname="Note book" pic="/pic/Notbook.jpg" />
+                <Product productname="Oil" sname="Oil" pic="/pic/Oil.jpg"price={150} />
+                  
+                <Product productname="Pen" sname="Pen" pic="/pic/Pen.jpg"price={85} />
                 
-                <Product productname="Oil" sname="Oil" pic="/pic/Oil.jpg" />
-                    
-                <Product productname="Pen" sname="Pen" pic="/pic/Pen.jpg" />
-                  
-                <Product productname="Face wash" sname="Face wash" pic="/pic/Facewash.jpg" />
-        
-                <Product productname="Phone" sname="Phone" pic="/pic/Phone.jpg" />
-        
-                <Product productname="Pensil" sname="Pensil" pic="/pic/Pensil.jpg" />
-        
-                <Product productname="Rose" sname="Rose" pic="/pic/blue.jpg" />
-
-                <SearchPage></SearchPage>
-         
+                <Product productname="Face wash" sname="Face wash" pic="/pic/Facewash.jpg"price={170} />
+                
+                <Product productname="Phone" sname="Phone" pic="/pic/Phone.jpg"price={1350} />
+                
+                <Product productname="Pensil" sname="Pensil" pic="/pic/Pensil.jpg"price={35} />
+                
+                <Product productname="Rose" sname="Rose" pic="/pic/blue.jpg"price={15} />
+              
               </div>
         
         );
-}
+   }
 export default Home;

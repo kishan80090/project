@@ -1,0 +1,27 @@
+[
+    {
+        "name":"rose",
+        "price":"20",
+        "image":"pic/red.jpg"
+    },
+    {
+        "name":"boll",
+        "price":"150",
+        "image":"pic/Boll.jpg"
+    },
+    {
+        "name":"fan",
+        "price":"1500",
+        "image":"pic/Fan.jpg"
+    },
+    {
+        "name":"book",
+        "price":"1500",
+        "image":"pic/Notbook.jpg"
+    },
+    {
+        "name":"hair oil",
+        "price":"150",
+        "image":"pic/Oil.jpg"
+    }
+]

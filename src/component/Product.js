@@ -17,19 +17,22 @@ import './Product.css';
 
         }
      });
-     let productlink=`product/?productname=${props.productname}`;
+     let productlink=`/search?productname=${props.pic}&price=${props.price}`;
      
      return(
      
      <div className='col1'>
+        <a href={productlink} target='a'>
 
-           <Link to="/search"><img className='col3' src={props.pic}></img></Link>   
+
+        <img className='col3' alt={props.sname} src={props.pic}></img> 
+        </a>
 
             <center><h2 className='name'>{props.sname}</h2></center>
 
             <div className='col2'>
  
-             <Link className='border' to={productlink}>{props.sname}</Link>
+
 
                 <div className="text">
  

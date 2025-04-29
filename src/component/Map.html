@@ -6,41 +6,29 @@
   <title>People Table</title>
 </head>
 <body>
+<h1><center>input tag</center></h1><center>
 
-  <h2>People Table</h2>
-  <table border="1" id="peopleTable">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Age</th>
-      </tr>
-    </thead>
-    <tbody>
-    </tbody>
-  </table>
-
-  <script>
-    let people = [
-      { name: "A", age: 30 },
-      { name: "B", age: 25 },
-      { name: "C", age: 35 }
-    ];
-
-    function generateRowHtml(person) {
-      return `
-        <tr>
-          <td>${person.name}</td>
-          <td>${person.age}</td>
-        </tr>
-      `;
-    }
-
-    let tbody = document.querySelector("#peopleTable tbody");
-
-    people.forEach(person => {
-      tbody.innerHTML += generateRowHtml(person);
-    });
-  </script>
+  <form action="/submit" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="username" required><br><br>
+  
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="useremail" required><br><br>
+  
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender">
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+    </select><br><br>
+  
+    <label for="msg">Message:</label><br>
+    <textarea id="msg" name="message" rows="4" cols="30"></textarea><br><br>
+  
+    <input type="submit" value="Submit">
+  </form>
+  
+</audio>
+</center>
 
 </body>
 </html>

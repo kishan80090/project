@@ -1,53 +1,37 @@
+import React, { useState } from 'react';
 import './Product.css';
- import React, { useState } from 'react';
- import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
- function Product(props) {
-
-     const [count, setCount] = useState(0); 
-     
-     const add = (() => {
-     setCount(count*1 + 1)
-     });
- 
-     const negative = (() => {         
-        if (count > 0) 
-        {
-
-        setCount(count*1 - 1);
-
+function Product(props) {
+    const [count, setCount] = useState(0);
+    const add = () => {
+        setCount(count + 1);
+    };
+    const negative = () => {
+        if (count > 0) {
+            setCount(count - 1);
         }
-     });
-     let productlink=`/search?productname=${props.pic}&price=${props.price}`;
-     
-     return(
-     
-     <div className='col1'>
-        <a href={productlink} target='a'>
+    };
+    let productlink = `/?productname=${props.sname}`;
+    const jsonproduct = JSON.parse(props.json);
+    console.log(props.json);
 
+    return (
+        <div className="col1">
 
-        <img className='col3' alt={props.sname} src={props.pic}></img> 
-        </a>
-
-            <center><h2 className='name'>{props.sname}</h2></center>
-
-            <div className='col2'>
- 
-
-
+            <a href={productlink} target="_blank" rel="noopener noreferrer">
+                <img className="col3" alt={jsonproduct.name} src={props.pic} />
+            </a>
+            <center><h2 className="name">{jsonproduct.name}</h2></center>
+            <h3 className='price'>Price ₹{props.price}</h3>
+            <div className="col2">
                 <div className="text">
- 
-                 <button onClick={negative}>−</button>
-
-                 <span>{count}</span>
-
-                 <button onClick={add}>+</button>
- 
+                    <button onClick={negative}>−</button>
+                    <span>{count}</span>
+                    <button onClick={add}>+</button>
                 </div>
-             </div>
- 
-             <p>{props.children}</p>
- 
-         </div>
-     )
- };
- export default Product;
+            </div>
+            <p>{props.children}</p>
+            
+        </div>
+    );
+}
+export default Product;

@@ -36,3 +36,36 @@
     transform: rotate(360deg);
   }
 }
+@keyframes fadeAnimation {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+.fading-text {
+display: flex;
+flex-wrap: wrap;
+gap: 10px;
+justify-content: center;
+animation: fadeAnimation 2s infinite;
+color: rgb(230, 41, 8);
+font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.margin{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+ 
+}
+.show{
+
+position: absolute;
+margin-right: 160px;
+margin-top: -20px;
+
+
+
+}

@@ -1,0 +1,11 @@
+.appstyle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: blue;
+}
+.appdiv{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}

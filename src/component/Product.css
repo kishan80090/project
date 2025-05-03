@@ -55,5 +55,13 @@
 }
 .name{
 
-    margin-top:-20px;
+    margin-top:-10px;
+    
+    
+}
+.price{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: blue;
 }

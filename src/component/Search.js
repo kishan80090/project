@@ -1,6 +1,6 @@
 import { useLocation } from 'react-router-dom';
 
-function SearchPage() {
+function Search() {
 
   const location = useLocation();
 
@@ -9,7 +9,7 @@ function SearchPage() {
   const imgurl = queryParams.get("productname");
   
   const price = queryParams.get("price");
-
+                                               
   return (
     
     <div>
@@ -20,4 +20,4 @@ function SearchPage() {
     </div>
   );
 }
-export default SearchPage;
+export default Search;

@@ -14,7 +14,6 @@ function Shopping() {
   return (
     <div className="margin">
       <div className="show">
-        
       </div>
       {products.map((product, index) => (
         <Product

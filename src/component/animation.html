@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .cube {
+      width: 100px;
+      height: 100px;
+      background-color: #3498db;
+      transform: rotateX(45deg) rotateY(45deg);
+      animation: rotateCube 3s linear infinite;
+    }
+    @keyframes rotateCube {
+      0% { transform: rotateX(0deg) rotateY(0deg); }
+      100% { transform: rotateX(360deg) rotateY(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="cube"></div>
+</body>
+</html>

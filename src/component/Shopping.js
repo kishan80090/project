@@ -27,5 +27,4 @@ function Shopping() {
     </div>
   );
 }
-
 export default Shopping;

@@ -15,7 +15,6 @@ function Download() {
                 console.log("Data stored successfully");
                 // navigate("/shopping"); 
             })
-
             .catch((error) => {
             console.error("Error storing data", error);
             

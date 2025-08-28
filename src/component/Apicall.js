@@ -1,15 +1,12 @@
 
 import { useState } from "react";
-
 import axios from 'axios';
-
 function Apicall() {
-
   const [products, setProducts] = useState([]);
   const show = () => {
     axios.get("https://kishan80090.github.io/jsondata/products.json")
       .then(response => {
-        localStorage.setItem("products", JSON.stringify(response.data));
+        localStorage.setItem("products", JSON.stringify(response.data))
       })
       .catch(error => {
         alert("Error fetching data");
@@ -24,7 +21,7 @@ function Apicall() {
   return (
     <div>
         <table border="1">
-            <tbody>
+      <tbody>
       <tr>  
       <td><button onClick={show}>Store</button></td>
       <td><button onClick={showData}>Show Data</button></td>

@@ -13,10 +13,8 @@ function Product(props) {
     let productlink = `/?productname=${props.sname}`;
     const jsonproduct = JSON.parse(props.json);
     console.log(props.json);
-
     return (
-        <div className="col1">
-
+        <div className="col1"> 
             <a href={productlink} target="_blank" rel="noopener noreferrer">
                 <img className="col3" alt={jsonproduct.name} src={props.pic} />
             </a>
@@ -30,7 +28,6 @@ function Product(props) {
                 </div>
             </div>
             <p>{props.children}</p>
-            
         </div>
     );
 }

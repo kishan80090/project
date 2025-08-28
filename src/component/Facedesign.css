@@ -1,92 +1,164 @@
+
 .main {
-    background-color: white(233, 231, 228);
-    width: 500px;
-    height: 800px;
-    margin: 20px auto;
-    box-shadow: 0px 0px 25px blue;
-    border-radius: 10px;
-    
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 16px rgba(0,0,0,0.15);
+  background: rgb(221, 209, 209);
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  animation: fadeIn 0.8s ease-in-out;
+  transform-origin: center;
 }
+
 
 .color {
-    color: rgb(31, 31, 150);
-    background-color: white;
-    border-radius: 10px;
-    
-}
-.color1{
-    color: rgb(126, 129, 129);
-}
-.input{
-    width: 200px;
-    height:35px;
-    margin-left: 5px;
-    margin-right: 5px;
-    font-size: 18px;
-}
-.input:hover{
-    border-color: red;
-}
-.dob{
-    margin-right: 335px;
-}
-.option{
-    width: 125px;
-    height: 35px;
-    margin-left: 5px;
-    margin-right: 5px;
-    font-size: 18px;
-}
-.radio{
-    width: 105px;
-    height: 35px;
-    margin-left: 20px;
-    margin-right: 20px;
-     
-}
-.email{
-    margin-top: 30px;
-    width: 400px;
-    height: 35px;
-    font-size: 18px;
-}
-.email:hover{
-    border-color: red;
-}
-.font{
-    font-size: 12px;
-}
-.font1{
-    font-size: 12px;
-    margin-right: 290px;
-}
-.font2{
-    font-size: 11px;
-    margin-right: 50px;
-}
-.font3{
-    font-size: 12px;
-    margin-right: 40px;
-}
-.botton{
-    width: 250px;
-    height: 40px;
-    font-size: 18px;
-    margin-top: 15px;
-    background-color:green;
-    border-radius: 10px;
-    border: none;
-    color: white;
-}
-.link{
-    margin-top: 15px;
-    
+  color: #1877f2;
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 10px;
+  user-select: none;
+  animation: slideDown 0.8s ease;
 }
 
-@media screen and (max-width: 600px) {
-    .main {
-        width: 90%;
-        margin: 20px auto;
-        padding: 15px;
-    }
+
+.row {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+
+.input, .option, .email {
+  flex: 1;
+  min-width: 120px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.input:focus, .option:focus, .email:focus {
+  border-color: #1877f2;
+  box-shadow: 0 0 6px rgba(24, 119, 242, 0.3);
+  transform: scale(1.02);
+}
+
+
+.radio {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.3s ease;
+}
+
+.radio:hover {
+  background: #f0f2f5;
+  transform: scale(1.02);
+}
+
+.radio input {
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+
+.email {
+  width: 100%;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+
+.button {
+  width: 100%;
+  background-color: #42b72a;
+  color: #fff;
+  font-size: 16px;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: popIn 0.6s ease-in-out;
+}
+
+.button:hover {
+  background-color: #36a420;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 4px 10px rgba(66,183,42,0.4);
+}
+
+.button:active {
+  transform: translateY(0) scale(1);
+}
+
+
+.link {
+  color: #1877f2;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: color 0.3s ease;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.link:hover {
+  color: #0e63d4;
+  text-decoration: underline;
+}
+
+
+.font {
+  font-size: 12px;
+  color: black;
+  margin: 5px 0;
+  opacity: 0.9;
+  animation: fadeInUp 0.9s ease;
+}
+
+.dob {
+  margin-top: 15px;
+  font-weight: 600;
+  color: #333;
+  user-select: none;
+  animation: slideUp 0.8s ease;
+}
+
+/* ---- Animations ---- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
 }
